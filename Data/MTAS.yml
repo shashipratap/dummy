@@ -1,0 +1,420 @@
+Special:
+  Data_Redundancy:
+    Destination:
+      - sheetname: Virtualisaton details
+        param: RAM
+        column: B
+      - sheetname: Virtualisaton details
+        param: Cinder Storage
+        column: B
+      - sheetname: MTAS Diameter
+        param: portNr
+        column: B  
+      - sheetname: MTAS Diameter
+        param: nodeIds
+        column: B 
+      - sheetname: MTAS Diameter
+        param: ipAddressesList
+        column: B 
+      - sheetname: MTAS XDMS
+        param: portNr
+        column: B           
+                            
+    Source:
+      - sheetname: ICS
+        param: SCP (Signaling Point)
+        column: B 
+
+Generic:
+
+  Flavors:
+    vMTAS_SC:
+      Virtualisaton details:
+        vCPU:
+          - C:C 
+        RAM%1:
+          - D:C 
+        Cinder Storage%1:
+          - E:C 
+    vMTAS_PL:
+      Virtualisaton details:
+        CPU:
+          - C:C 
+        RAM%2:
+          - D:C 
+        Cinder Storage%2:
+          - E:C            
+  IP VLAN:
+    S-CSCF Signaling VIP:
+      Neighbour Nodes Input:
+        S-CSCF01:
+          - I:C
+    I-CSCF Signaling VIP:
+      Neighbour Nodes Input:
+        I-CSCF01:
+          - I:C      
+
+    HSS IP address and port used for Sh:
+      Neighbour Nodes Input:
+        HSS01:
+          - C:C
+    IP for OSS:
+      Neighbour Nodes Input:
+        OSS16A VIP:
+          - C:C
+    MTAS_VIP Signaling VIP:
+      MTAS DNS:
+        dnsLocalAddress:
+          - I:C
+    MTAS_SH Signaling VIP:
+      MTAS XDMS:
+        ipAddressesList:
+          - C:C
+      MTAS Diameter:
+        ipAddressesList%1:
+          - I:C    
+    Charging VIP:
+      MTAS Diameter:
+        ipAddressesList%4:
+          - I:C
+    VIP of MTAS_SIGTR1:
+      SS7 Config:
+        "S1MTAS01 IP (FEx: Local AddressTable#2)":
+          - I:C
+    VIP of MTAS_SIGTR2:
+      SS7 Config:
+        "S1MTAS01 IP (FEx: Local AddressTable#2)":
+          - I:C          
+    mtas_chr_sp1:
+      Virtualisaton details:
+        OM_CN:
+          - H:C
+        VRRP%1:
+          - I:C  
+    mtas_sigtr_sp1:
+      Virtualisaton details:
+        SIG_CN:
+          - H:C
+        VRRP%2:
+          - I:C  
+    eipw_om_sp1:
+      Virtualisaton details:  
+        OM_CN:
+          - H:C
+        VRRP%3: 
+          - I:C 
+    mtas_sigtr_sp2:
+      Virtualisaton details: 
+        SIG_PDL:
+          - H:C 
+        VRRP%4:
+          - I:C
+
+    iipw_sig_sp1:
+      Virtualisaton details: 
+        SIG_PDR:
+          - H:C
+        VRRP%5:  
+          - I:C
+    li_cn_sp:
+      Virtualisaton details: 
+        LI:
+          - H:C
+        VRRP%6: 
+          - I:C
+    mtas_om1_sp1:
+      Virtualisaton details: 
+        OM_CN:
+          - H:C
+        VRRP%7: 
+          - I:C
+    City:
+      Virtualisaton details: 
+        System Timezone:
+          - C:C        
+  Common Info.:
+    vMTAS:
+      Neighbour Nodes Input:
+        Node:
+          - C:C
+      MTAS:  
+        managedElementId:
+          - C:C
+        networkManagedElementId:
+          - C:C
+    DNS_IP1:
+      MTAS DNS:
+        dnsServerEntry:
+          - C:C
+      Neighbour Nodes Input:
+        IPWorks01:
+          - C:C    
+    DNS_IP2:
+      Neighbour Nodes Input:
+        IPWorks02:
+          - C:C
+    VNF_NTP IP1:
+      Neighbour Nodes Input:
+        NTP01:
+          - C:C 
+    VNF_NTP IP2:
+      Neighbour Nodes Input:
+        NTP02:
+          - C:C
+  vMMTeL:
+    mtasSipIcscfName:
+      Mtas Function:
+        mtasSipIcscfName:
+          - C:C
+    mtasIdPresCnipCnameServerName:
+      Mtas Function:
+        mtasIdPresCnipCnameServerName:
+          - C:C
+    MTAS_CONF_FACTORY_URI:
+      Mtas Function:
+        mtasConfFactoryUri:
+          - C:C
+    MTAS_CONF_URI_SUBDOMAIN:
+      Mtas Function:
+        mtasConfUriSubdomain:
+          - C:C
+    mtasVoiceMailDepositServerAddress:
+      Mtas Function:
+        mtasVoiceMailDepositServerAddress:
+          - C:C
+    mtasVoiceMailRetrievalServerAddress:
+      Mtas Function:        
+        mtasVoiceMailRetrievalServerAddress:
+          - C:C                            
+    mtasCDIVDefaultVoiceMailAddress:
+      MMTel SS:
+        mtasCDivDefaultVoiceMailAddress:
+          - C:C
+    MTAS_3PTY_FACTORY_URI:
+      MMTEL AS:
+        mtas3ptyFactoryUri:
+          - C:D 
+    mtasXdmsCai3gUser:
+      MTAS XDMS:
+        mtasXdmsCai3gUser:
+          - C:C
+    mtasXdmsCai3gUserPassword:
+      MTAS XDMS:
+        mtasXdmsCai3gUserPassword:
+          - C:C
+    MTAS_XDMS_OWN_REALM:
+      MTAS XDMS:
+        realm:
+          - C:C
+    MTAS_XDMS_OWN_HOST:
+      MTAS XDMS:
+        hostId:
+          - C:C
+    HSS IP address and port used for Sh:
+      MTAS XDMS:
+        ipAddressesList:
+          - C:C
+        portNr%2:
+          - C:C
+      MTAS Diameter:
+        ipAddressesList%2:
+          - C:C
+        ipAddressesList%3:
+          - C:C  
+        portNr%2:
+          - C:C  
+    HSS host ID for Sh:
+      MTAS XDMS:
+        nodeIds:
+          - C:C
+      MTAS Diameter:
+        mtasShIfDestinationHost:
+          - C:C  
+        nodeIds%1:
+          - C:C   
+
+    realm for HSS Sh connection:
+      MTAS Diameter:
+        mtasShIfDestinationRealm:
+          - C:C
+    realm for MTAS Sh connection:
+      MTAS Diameter:
+        realm:
+          - C:C
+    MTAS host ID for Sh:
+      MTAS Diameter:
+        hostId:
+          - C:C
+  Offline charging:
+    IP for MM:
+      Neighbour Nodes Input:
+        CDF01:
+          - C:C
+        CDF02:
+          - D:C  
+      MTAS Diameter:
+        ipAddressesList%5:
+          - C:C
+        ipAddressesList%6:
+          - C:C          
+    port used by MM:
+      MTAS Diameter:
+        portNr%4:
+          - C:C          
+    Host Name for MM:
+      Mtas Function:
+        mtasChargingDefaultCdfAddress:
+          - C:C
+      MTAS Diameter:
+        realm:
+          - C:C
+        nodeIds%2:
+          - C:C
+        nodeIds%3:
+          - C:C          
+  Online charging:
+    IP for OCS:
+      Neighbour Nodes Input:
+        OCS01:
+          - C:C
+        OCS02:
+          - D:C          
+      MTAS Diameter:
+        ipAddressesList%7:
+          - C:C
+    port used by OCS:
+      MTAS Diameter:
+        portNr%5:
+          - C:C
+    realm for OCS:
+      MTAS Diameter:
+        realm:
+          - C:C
+  FM PM:
+    IP for OSS:
+      Neighbour Nodes Input:
+        OSS16A VIP:
+          - C:C
+  ICS:
+    SCTP IP1:
+      Neighbour Nodes Input:
+        MTASxx_STPxx:
+          - C:C
+      SS7 Config:
+        Remote SGP IP Address:
+          - C:C
+        MSC1 IP:
+          - C:C  
+
+    SCTP IP2:      
+      Neighbour Nodes Input:
+        MTASxx_STPxx:
+          - C:D
+      SS7 Config:
+        Remote SGP IP Address:
+          - C:D   
+        MSC1 IP:
+          - C:D   
+    GT (Global Title) – will be the same for both MTAS (redundancy):      
+      Neighbour Nodes Input:
+        Common GT:
+          - C:C
+      MTAS SCC AS:
+        mtasCsiGlobalTitle:
+          - C:C
+      SS7 Config:
+        Global Title:
+          - C:C
+        NP:
+          - C:C  
+
+    GT (Global Title):
+      Neighbour Nodes Input:
+        own GT:
+          - C:C  
+      SS7 Config:
+        NA:
+          - C:C   
+             
+    Local Port Number for SCTP association:
+      Neighbour Nodes Input:
+        port:
+          - C:C  
+      SS7 Config:    
+        MTAS Port:
+          - C:C  
+    SdsImrnPrefix used in T-SDS:
+      MTAS SCC AS:
+        mtasSdsImrnPrefix:
+          - C:C
+    IMRN Range value for vMTAS Location Site1:
+      MTAS SCC AS:
+        mtasImrnRangeFirst:
+          - C:C
+        mtasImrnRangeLast:
+          - C:C
+    MTAS_SDS_SERVED_HPLMN:
+      MTAS SCC AS:
+        mtasSdsServedHplmn:
+          - C:C
+    MTAS_SDS_SERVED_HplmnCc:
+      MTAS SCC AS:              
+        mtasSdsServedHplmnCc:
+          - C:C
+    CSRN Prefix:   
+      MTAS SCC AS:  
+        mtasTadsCsrnPrefix:
+          - C:C
+    SCP (Signaling Point)@1:
+      SS7 Config:
+        Remote SPC:
+          - C:C
+        Remote AS ID:
+          - C:C             
+    SCP (Signaling Point)@2:
+      SS7 Config:      
+        Local AS ID:
+          - C:C  
+
+        Local SPC:
+          - C:C  
+    SSN (MSCx Subsystem Number):
+      SS7 Config:
+        Remote SSN:
+          - C:C         
+    SSN (Subsystem Number) used in MTAS (SCP) – same for both MTAS:
+      SS7 Config:
+        Local SSN:
+          - C:C
+    Service Key (SK):
+      SS7 Config:
+        Remote AS RoutingKey:
+          - C:C            
+    Port Number:
+      SS7 Config:
+        STP01 Port:
+          - C:C
+
+  JIRA Input:
+    City:
+      Neighbour Node Input:
+        System Timezone:
+          - C:C
+  SRVCC:
+    Site1:
+      MTAS SCC AS:
+        mtasSrvccAtuSti:
+          - C:C
+    MTAS_SRVCC_SCC_AS_URI:
+      MTAS SCC AS: 
+        mtasSrvccSccAsUri:
+         - C:C       
+  NeLS:
+    Thrift network:
+      Neighbour Nodes Input:
+        Nels:
+          - E:C
+
+
+
+
